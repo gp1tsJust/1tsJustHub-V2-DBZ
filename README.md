@@ -1,3 +1,29 @@
+wait (0.8)
+
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "1tsJusthub";
+        Text = "Loading!";
+        Duration = "15";
+        })
+
+wait (0.8)        
+
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "1tsJusthub";
+        Text = "Loading Compleated";
+        Duration = "15";
+        })
+
+wait (0.8)        
+
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "1tsJustHub";
+        Text = "Bully The Down Now";
+        Duration = "15";
+        })
+
+wait (0.7)
+
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("1tsJustHub v2(DBZ FS)", "DarkTheme")
     
@@ -282,7 +308,7 @@ end
         end
     end)
 
-    BullySection:NewButton("Dragon Crush", "Dragon Crush Glich", function()
+    BullySection:NewButton("Dragon Crush Glich", "Dragon Crush Glich", function()
         local player = game.Players.LocalPlayer
         local Character = player.character
         while wait(0.3) do
@@ -304,6 +330,14 @@ end
             until not Character["Dragon Crush"].Activator:FindFirstChild("Flip")
         end
     
+    end)
+
+    BullySection:NewToggle("Anchor", "Anchor Charapter", function(state)
+        if state then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true 
+        else
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false 
+        end
     end)
 
     BullySection:NewKeybind("Fast God", "Fast God Form", Enum.KeyCode.U, function()
@@ -376,12 +410,12 @@ end
     BullySection:NewButton("Melee Spam", "Press V to spam", function()
         Move1 = "Anger Rush"
 Move2 = "Sweep Kick"
-Move3 = "Deadly Dance"
+Move3 = "Trash???"
 Move4 = "Neo Wolf Fang Fist"
 Move5 = "Wolf Fang Fist"
 Move6 = "TS Molotov"
 Move7 = "Trash?"
-Move8 = "Trash???"
+Move8 = "Deadly Dance"
 Move9 = "God Slicer"
 --
 MSKey = "v" -- Change the key inside the quotations to whatever key you want to use to toggle your movespam.
@@ -392,13 +426,13 @@ _cMhlNnFWdeO1FLGW, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
     BullySection:NewButton("Ki Spam", "Press V to spam", function()
         Move1 = "Sudden Storm"
-Move2 = "Divine Lasso"
+Move2 = "Finish Breaker"
 Move3 = "Demon Flash"
 Move4 = "Big Bang Kamehameha"
 Move5 = "Burning Blast"
 Move6 = "Justice Flash"
-Move7 = "Trash?"
-Move8 = "Trash???"
+Move7 = "Divine Lasso"
+Move8 = "Pressure Gauge"
 Move9 = "Blaster Meteor"
 --
 MSKey = "v" -- Change the key inside the quotations to whatever key you want to use to toggle your movespam.
