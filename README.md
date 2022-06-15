@@ -167,6 +167,21 @@ return(function(NDR_h,NDR_a,NDR_l)local NDR_k=string.char;local NDR_e=string.sub
             end
         
         end)
+
+
+        BullySection:NewButton("Bone Crush Glich", "Pressing V while bone crush equipped will", function()
+            wait()
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "1tsJustHub", Text = "After glich Hard Reset For Moves  ",})
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+mouse.KeyDown:connect(function(key)
+    if key == "v" then
+        local lplr = game.Players.LocalPlayer
+        lplr.Character["Bone Crush"].Activator.Crash:Destroy()
+    end
+end)
+
+        end)
     
     
     
@@ -294,6 +309,67 @@ return(function(NDR_h,NDR_a,NDR_l)local NDR_k=string.char;local NDR_e=string.sub
 			wait(2)
 			game.Players.LocalPlayer.Character:FindFirstChildOfClass("Model"):Destroy()
 	end)
+
+
+    CharapterSection:NewButton("Hide Wings", "Hide Wings", function()
+        
+
+getgenv().enabler = true  
+
+
+if (not game:IsLoaded()) then
+    game.Loaded:Wait();
+end;
+local lplr=game:GetService('Players').LocalPlayer;
+local char=game:GetService('Workspace'):waitForChild('Live'):waitForChild(lplr.Name);
+function xd(char)
+    lmfao=false;
+    if (getgenv().enabler==false) then
+        ran:Disconnect();
+    else
+        repeat wait();
+            if (char:findFirstChild('RebirthWings')) then
+                x=char.HumanoidRootPart.CFrame.X;
+                y=char.HumanoidRootPart.CFrame.Y;
+                z=char.HumanoidRootPart.CFrame.Z;
+                char.HumanoidRootPart.CFrame=CFrame.new(x,y,z) + Vector3.new(0,-200,0);
+                char.RebirthWings.Handle.AccessoryWeld:Destroy();
+                char.HumanoidRootPart.CFrame=CFrame.new(x,y,z);
+                x,y,z=nil;
+                char.RebirthWings:Destroy();
+                lmfao=true;
+            end;
+            if (char:findFirstChild('RealHalo')) then
+                x=char.HumanoidRootPart.CFrame.X;
+                y=char.HumanoidRootPart.CFrame.Y;
+                z=char.HumanoidRootPart.CFrame.Z;
+                char.HumanoidRootPart.CFrame=CFrame.new(x,y,z) + Vector3.new(0,-200,0);
+                char.RealHalo.Handle.AccessoryWeld:Destroy();
+                char.HumanoidRootPart.CFrame=CFrame.new(x,y,z);
+                x,y,z=nil;
+                char.RealHalo:Destroy();
+                lmfao=true;
+            end;
+        until lmfao==true or getgenv().enabler==false;
+    end;
+end;
+repeat wait()
+    for i,v in pairs(char:getChildren()) do
+        if v:IsA('Model') then
+            lmao=true;
+            xd(char);
+            break;
+        end;
+    end;
+until lmao==true;
+lmao=false;
+lplr.CharacterRemoving:connect(function() lmfao=true;end);
+lplr.CharacterAdded:connect(function(v)
+    char=v;
+    xd(char);
+    print('reconnected');
+end);
+    end)
 
 
 
