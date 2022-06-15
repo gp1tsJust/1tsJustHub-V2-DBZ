@@ -448,9 +448,6 @@ end
 
 
 
-	MiscSection:NewKeybind("Hide UI", "Hide UI", Enum.KeyCode.RightControl, function()
-		Library:ToggleUI()
-	end)
 
 
 
@@ -470,5 +467,16 @@ end
 
 	local Main = Window:NewTab("Credit")
     local CreditSection = Main:NewSection("Credit to 1tsJustgp")
+
 	local DsSection = Main:NewSection("Discord private gp1tsJust#3203")
 	local DserverSection = Main:NewSection("Server Discord https://discord.gg/TWqQNcpN")
+
+    local Main = Window:NewTab("Info")
+    local InfoSection = Main:NewSection("Info")
+    local SoonSection = Main:NewSection("1tsJustHub V3 Soon...")
+
+
+
+    InfoSection:NewKeybind("Hide UI", "Hide UI", Enum.KeyCode.RightControl, function()
+		Library:ToggleUI()
+	end)
