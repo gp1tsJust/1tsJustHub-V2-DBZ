@@ -1,4 +1,30 @@
-wait (0.8)
+
+
+
+wait (1.2)
+
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Whitlist System";
+            Text = "Whitelist System Loading";
+            Duration = "15";
+            })
+
+
+local HWIDTable = loadstring(game:HttpGet(("https://pastebin.com/raw/KrgrAkVt"), true))()
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+print(HWIDTable)
+for i,v in pairs(HWIDTable) do
+    if v == HWID then
+
+        wait(1.5)
+        
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Whitlist System";
+        Text = "Troll U are Whitlisted";
+        Duration = "15";
+        })
+
+            wait (2)
 
     game.StarterGui:SetCore("SendNotification", {
         Title = "1tsJusthub";
@@ -368,8 +394,8 @@ end)
 		--Charapterr
 
 
-	local Main = Window:NewTab("Charapter")
-    local CharapterSection = Main:NewSection("Charapter")
+	local Main = Window:NewTab("Character")
+    local CharapterSection = Main:NewSection("Character")
 
 	CharapterSection:NewButton("Hide Level", "Hide your Level", function()
 		if not game:IsLoaded() then
@@ -625,3 +651,19 @@ end
     InfoSection:NewKeybind("Hide UI", "Hide UI", Enum.KeyCode.RightControl, function()
 		Library:ToggleUI()
 	end)
+
+        
+
+
+
+    else
+
+        
+            wait(2)
+            game.StarterGui:SetCore("SendNotification", {
+            Title = "Whitlist System";
+            Text = "you not whitelisted :(";
+            Duration = "15";
+            })
+    end
+end
